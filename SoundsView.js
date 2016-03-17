@@ -38,7 +38,17 @@ var styles = StyleSheet.create({
   },
   rowContainer: {
     flexDirection: 'row',
-    padding: 10
+    padding: 10,
+  },
+  section: {
+    height: 30,
+    backgroundColor: '#123456'
+  },
+  sectionText: {
+    color: '#FFFFFF',
+    fontSize: 25,
+    lineHeight: 30,
+    textAlign: 'center'
   }
 });
 
@@ -49,23 +59,28 @@ Sound.enable(true);
 class SoundsView extends React.Component {
   constructor(props) {
     super(props);
-    //this.props.soundsData = soundsData;
+
     var dataSource = new ListView.DataSource(
-      {rowHasChanged: (r1, r2) => r1.name !== r2.name});
+      {
+        sectionHeaderHasChanged : (s1, s2) => s1 !== s2,
+        rowHasChanged: (r1, r2) => r1 !== r2
+      });
     this.state = {
-      dataSource: dataSource.cloneWithRows(soundsData)
+      dataSource: dataSource.cloneWithRowsAndSections(this._convertJSONtoMap())
     }
   }
 
-  // componentWillMount() {
-  //   fetch('./sounds.json')
-  //   .then((res) => res.json())
-  //   .then((data) => {
-  //     this.setState({
-  //       dataSource: data
-  //     });
-  //   });
-  // }
+  _convertJSONtoMap() {
+    var soundsMap = {};
+
+    soundsData.forEach(function(data) {
+      if (!soundsMap[data.speaker]) {
+        soundsMap[data.speaker] = [];
+      }
+      soundsMap[data.speaker] = data.sounds;
+    });
+    return soundsMap;
+  }
 
   renderRow(rowData, sectionID, rowID) {
      return (
@@ -83,25 +98,31 @@ class SoundsView extends React.Component {
      );
   }
 
+  renderSectionHeader(sectionData, sectionID) {
+   return (
+     <View style={styles.section}>
+       <Text style={styles.sectionText}>{sectionID}</Text>
+     </View>
+     )
+ }
+
   render() {
     return (
       <ListView
         dataSource={this.state.dataSource}
-        renderRow={this.renderRow.bind(this)}/>
+        renderRow={this.renderRow.bind(this)}
+        renderSectionHeader={this.renderSectionHeader.bind(this)}/>
     );
   }
 
   rowPressed(data) {
     console.log("Data :" + data.name);
     var path = "./Sounds/" + data.file
-    console.log("Path:"+path);
+
     var whoosh = new Sound(path, Sound.MAIN_BUNDLE, (error) => {
       if (error) {
         console.log('failed to load the sound', error);
-      } else { // loaded successfully
-        console.log('duration in seconds: ' + whoosh.duration +
-            'number of channels: ' + whoosh.numberOfChannels);
-        // Play the sound with an onEnd callback
+      } else {
         whoosh.play((success) => {
           if (success) {
             console.log('successfully finished playing');
@@ -111,10 +132,6 @@ class SoundsView extends React.Component {
         });
       }
     });
-
-
-
-
   }
 }
 

@@ -1,78 +1,101 @@
 [
   {
-    "name" : "Putain mais tu fais chier",
-    "file" : "ZOOM0009.WAV"
+	  "speaker": "Fische_m",
+	   "sounds": [{
+    		"name": "Putain mais tu fais chier",
+    		"file": "fische_m/ZOOM0009.WAV"
+    	}, {
+    		"name": "Casse toi",
+    		"file": "fische_m/ZOOM0010.WAV"
+    	}, {
+    		"name": "TG",
+    		"file": "fische_m/ZOOM0011.WAV"
+    	}, {
+    		"name": "La ferme",
+    		"file": "fische_m/ZOOM0012.WAV"
+    	}, {
+    		"name": "Putain mais casse toi",
+    		"file": "fische_m/ZOOM0013.WAV"
+    	}, {
+    		"name": "Mais putain mais casse toi",
+    		"file": "fische_m/ZOOM0014.WAV"
+    	}, {
+    		"name": "Ferme ta gueule",
+    		"file": "fische_m/ZOOM0015.WAV"
+    	}, {
+    		"name": "Franchement fermez vos gueules",
+    		"file": "fische_m/ZOOM0016.WAV"
+    	}, {
+    		"name": "Ca sert à rien",
+    		"file": "fische_m/ZOOM0017.WAV"
+    	}, {
+    		"name": "Mais putain mais fermez vos gueules",
+    		"file": "fische_m/ZOOM0018.WAV"
+    	}, {
+    		"name": "Mais putain ferme ta gueule",
+    		"file": "fische_m/ZOOM0019.WAV"
+    	}, {
+    		"name": "Ta gueule",
+    		"file": "fische_m/ZOOM0020.WAV"
+    	}, {
+    		"name": "Tu fais chier",
+    		"file": "fische_m/ZOOM0021.WAV"
+    	}, {
+    		"name": "En même temps si t'es une merde",
+    		"file": "fische_m/ZOOM0022.WAV"
+    	}, {
+    		"name": "Casse toi putain, casse toi !",
+    		"file": "fische_m/ZOOM0023.WAV"
+    	}, {
+    		"name": "Connard",
+    		"file": "fische_m/ZOOM0024.WAV"
+    	}, {
+    		"name": "Putain mais t'es vraiment un connard",
+    		"file": "fische_m/ZOOM0025.WAV"
+    	}, {
+    		"name": "PD",
+    		"file": "fische_m/ZOOM0026.WAV"
+    	}
+    ]
   },
   {
-    "name" : "Casse toi",
-    "file" : "ZOOM0010.WAV"
-  },
-  {
-    "name" : "TG",
-    "file" : "ZOOM0011.WAV"
-  },
-  {
-    "name" : "La ferme",
-    "file" : "ZOOM0012.WAV"
-  },
-  {
-    "name" : "Putain mais casse toi",
-    "file" : "ZOOM0013.WAV"
-  },
-  {
-    "name" : "Mais putain mais casse toi",
-    "file" : "ZOOM0014.WAV"
-  },
-  {
-    "name" : "Ferme ta gueule",
-    "file" : "ZOOM0015.WAV"
-  },
-  {
-    "name" : "Franchement fermez vos gueules",
-    "file" : "ZOOM0016.WAV"
-  },
-  {
-    "name" : "Ca sert à rien",
-    "file" : "ZOOM0017.WAV"
-  },
-  {
-    "name" : "Mais putain mais fermez vos gueules",
-    "file" : "ZOOM0018.WAV"
-  },
-  {
-    "name" : "Mais putain ferme ta gueule",
-    "file" : "ZOOM0019.WAV"
-  },
-  {
-    "name" : "Ta gueule",
-    "file" : "ZOOM0020.WAV"
-  },
-  {
-    "name" : "Tu fais chier",
-    "file" : "ZOOM0021.WAV"
-  },
-  {
-    "name" : "En même temps si t'es une merde",
-    "file" : "ZOOM0022.WAV"
-  },
-  {
-    "name" : "Casse toi putain, casse toi !",
-    "file" : "ZOOM0023.WAV"
-  },
-  {
-    "name" : "Connard",
-    "file" : "ZOOM0024.WAV"
-  },
-  {
-    "name" : "Putain mais t'es vraiment un connard",
-    "file" : "ZOOM0025.WAV"
-  },
-  {
-    "name" : "PD",
-    "file" : "ZOOM0026.WAV"
-  },
-  {
-    "name" : "Loup",
-    "file" : "loup.mp3"
+    "speaker": "Lucy",
+     "sounds": [{
+        "name": "Arrête",
+        "file": "mambre_l/arrete.mp3"
+      },
+      {
+        "name": "Catastrophe",
+        "file": "mambre_l/catastrophe.mp3"
+      },
+      {
+        "name": "Deter",
+        "file": "mambre_l/deter.mp3"
+      },
+      {
+        "name": "Hein",
+        "file": "mambre_l/hein.mp3"
+      },
+      {
+        "name": "Hoo",
+        "file": "mambre_l/hoo.mp3"
+      },
+      {
+        "name": "llll",
+        "file": "mambre_l/llll.mp3"
+      },
+      {
+        "name": "Loup",
+        "file": "mambre_l/loup.mp3"
+      },
+      {
+        "name": "N'importe quoi",
+        "file": "mambre_l/nimportequoi.mp3"
+      },
+      {
+        "name": "Non",
+        "file": "mambre_l/non.mp3"
+      }
+    ]
   }
 ]
